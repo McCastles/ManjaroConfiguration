@@ -15,18 +15,39 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
+# ZSHRC
+alias zshrc="vim ~/.zshrc"
+
+# Traversing
+alias ...=../..
+alias ....=../../..
+alias .....=../../../..
+alias ......=../../../../..
+alias 1='cd -1'
+alias 2='cd -2'
+alias 3='cd -3'
+alias _='sudo '
+
+# Display
 alias t="tree --dirsfirst --du -h -L 1"
 alias ta="t -a"
 alias tl="t -L 2"
 alias la="ls -la"
+
+# Files
 alias vi="vim"
-alias zshrc="vim ~/.zshrc"
-alias cherry="echo 'Suspend in 30 minutes...' && sleep 30m && systemctl suspend"
 alias files="dolphin . &"
-alias gs="git status"
 alias dfh="df -h ~/"
 alias size="du -hs *"
 alias system="inxi -Fza"
+
+# Time
+alias cherry="echo 'Suspend in 30 minutes...' && sleep 30m && systemctl suspend"
+alias dive="echo 'Suspend in 90 minutes...' && sleep 90m && systemctl suspend"
+
+# Git
+alias gs="git status"
+
 
 
 # >>> conda initialize >>>
